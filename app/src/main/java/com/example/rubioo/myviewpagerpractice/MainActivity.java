@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class NumberPagerAdapter extends FragmentPagerAdapter {
+        
         public NumberPagerAdapter(FragmentManager fm) {
             super(fm);
         }
