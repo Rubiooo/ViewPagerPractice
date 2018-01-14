@@ -20,12 +20,17 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new NumberPagerAdapter(getSupportFragmentManager()));
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.view_pager_tab);
-
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setBackgroundResource(R.color.tab_bg);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_favorite_white_24dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_people_white_24dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_phone_white_24dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_setting_white_24dp);
     }
 
     private class NumberPagerAdapter extends FragmentPagerAdapter {
-        
+
         public NumberPagerAdapter(FragmentManager fm) {
             super(fm);
         }
